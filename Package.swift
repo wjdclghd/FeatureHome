@@ -20,13 +20,13 @@ let package = Package(
         )
     ],
     dependencies: [
-        
+        .package(path: "../../Core/UI/DesignSystem")
     ],
     targets: [
         .target(
             name: "FeatureHome",
             dependencies: [
-                
+                "DesignSystem"
             ],
             path: "Sources/FeatureHome",
             linkerSettings: [
@@ -36,7 +36,7 @@ let package = Package(
         .testTarget(
             name: "FeatureHomeTests",
             dependencies: [
-                
+                "FeatureHome"
             ],
             path: "Tests/FeatureHomeTests",
             linkerSettings: [
